@@ -7,7 +7,7 @@ class RecipeConverter
 
   def to_tablespoons
     converted = []
-    ingredients.map do |hash|
+    ingredients.each do |hash|
       hash.each do |ingredient, amount|
         converted << {ingredient => amount/15}
       end
@@ -16,13 +16,11 @@ class RecipeConverter
   end
 
   def to_cups
-    converted = []
     ingredients.map do |hash|
-      hash.each do |ingredient, amount|
-        converted << {ingredient => (amount/15)/16}
+      hash.map do |ingredient, amount|
+        {ingredient => (amount/15)/16}
       end
-    end
-    converted
+    end.flatten
   end
 
 end
