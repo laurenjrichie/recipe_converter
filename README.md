@@ -11,6 +11,8 @@ of the ingredient. The value is now the number of tablespoons of the ingredient 
 There is also a method called ‘to_cups’ that returns an array of hashes. The key is still a string that is the name of
 the ingredient. The value is now the number of cups of the ingredient needed. There are 16 tablespoons to a cup.
 
+grams x 15 x 16 = cups
+
 # Setup
 
 * Fork
